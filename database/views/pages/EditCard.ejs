@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container-fluid bg-light">
+      <header>
+          <%- include('../partials/header'); %>
+      </header>
+    
+    <main>
+          <div class="row" style="margin-top:10%;">
+                <div class="col"></div>
+                <div class="col-8" align="center">
+                    <form action="/EditPerson/<%=userFormData.personId%>" method="post">
+                        <div class="form-group d-flex justify-content-between">
+                          <input type="text" class="form-control" id="firstName" aria-describedby="firHelp" placeholder="First Name" name="fName" value="<%=userFormData.name.firstName%>" required>&emsp;&emsp;
+                          <input type="text" class="form-control" id="lastName" aria-describedby="lasHelp" placeholder="Last Name" name="lName" value="<%=userFormData.name.lastName%>" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="date" class="form-control" id="BirthDate" placeholder="Date of Birth" name="dob" value="<%=userFormData.DateOfBirth%>" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="number" class="form-control" id="personRoll" placeholder="Roll Number" name="rno" value="<%=userFormData.rollNo%>" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="Father Name" placeholder="Father Name" name="FathName" value="<%=userFormData.FathName%>" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col">
+
+                </div>
+          </div>
+    </main>
+    
+    <!-- <footer>
+      <%- include('../partials/footer'); %>
+    </footer> -->
+
+
+</body>
+</html>

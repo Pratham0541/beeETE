@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body style="background-color: cadetblue;">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+      
+      <main>
+        <div style="font-size: 40px;font-weight:bold; color: aliceblue; text-align: center;">RECORD HISTORY</div>
+            <div class="row" style="margin-top:5% ;">
+                <div class="col"></div>
+                <div class="col-7">
+                    <% if(flag==true) { %>
+                        <div class="container-fluid d-flex flex-wrap justify-content-around">
+                            <% dataList.forEach((ele)=>{ %>
+                                <%- include('../partials/userCard',{user:ele}) %>
+                            <%})%>
+                        </div>
+                    <%} else { %>
+                        <div class="text-white" style="font-size:3rem;margin:40px;margin-left:230px" >nothing to show here</div>
+                      <%}%>
+                </div>
+                <div class="col"></div>
+            </div>
+      </main>
+      
+      <!-- <footer>
+        <%- include('../partials/footer'); %>
+      </footer> -->
+
+
+</body>
+</html>
