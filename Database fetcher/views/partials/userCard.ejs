@@ -1,0 +1,11 @@
+<div class="card" style="width: 28%;margin-top: 2%;" align="center">
+    <div class="card-body">
+      <h5 class="card-title"><%=user.name.firstName %> <%=user.name.lastName %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%=user.rollNo %></h6>
+      <p class="card-text"><%=user.DateOfBirth %></p>
+      <p class="card-text"><%=user.FathName %></p>
+    </div>
+    
+      <button class="btn btn-danger"><a href="/deleteCard/<%= user.personId %>" style="text-decoration:none;color:white;" >Delete</a></button>
+      <button class="btn btn-primary"><a href="/editCard/<%= user.personId %>" style="text-decoration:none;color:black;">Edit</a></button>
+</div>

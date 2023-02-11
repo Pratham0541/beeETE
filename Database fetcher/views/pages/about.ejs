@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body style="background-color: cadetblue;"> 
+  <header>
+      <%- include('../partials/header'); %>
+  </header>
+    
+    <main>
+      <div style="font-size: 40px;font-weight:bold; color: aliceblue; text-align: center;">ENTER DETAILS</div>
+          <div class="row" style="margin-top:5%;">
+              <div class="col"></div>
+              <div class="col-7">
+                  <form action="/AddPerson" method="post">
+                      <div class="form-group d-flex justify-content-between">
+                        <input type="text" class="form-control" id="firstName" aria-describedby="firHelp" placeholder="First Name" name="fName" pattern="[A-z]{3,}" required>&emsp;&emsp;
+                        <input type="text" class="form-control" id="lastName" aria-describedby="lasHelp" placeholder="Last Name" name="lName" pattern="[A-z]{3,}" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="date" class="form-control" id="BirthDate" placeholder="Date of Birth" name="dob" max="2002-12-31" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="personRoll" placeholder="Roll Number" name="rno" pattern="[0-9]{10}" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="Father Name" placeholder="Father Name" name="FathName" pattern="[A-z]{3,}" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+              <div class="col"></div>
+          </div>
+    </main>
+    
+    <!-- <footer class="footer">
+      <%- include('../partials/footer'); %>
+    </footer> -->
+
+
+</body>
+</html>
